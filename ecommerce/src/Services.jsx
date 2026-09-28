@@ -32,7 +32,7 @@ function Services(){
 
             <div className="ml-7 mt-6 mb-4 border border-[#26352D] rounded-xl p-2 ">
                 <div className=" rounded-full px-2">
-                    <FontAwesomeIcon icon={faTruck} className="text-xl mt-3 text-[#55C84A]" /> 
+                    <FontAwesomeIcon icon={faShield} className="text-xl mt-3 text-[#55C84A]" /> 
                 </div> 
                 <p className="text-white font-bold text-xl">Secure Payments</p>
                 <p className="text-white/80 mt-2 text-sm md:text-lg">Shop with confidence using our secure payment system. Your payment information is protected with industry-leading security.</p>
@@ -40,7 +40,7 @@ function Services(){
 
             <div className="ml-7 mt-6 mb-4 border border-[#26352D] rounded-xl p-2 ">
                 <div className=" rounded-full px-2">
-                    <FontAwesomeIcon icon={faTruck} className="text-xl mt-3 text-[#55C84A]" /> 
+                    <FontAwesomeIcon icon={faRotateLeft} className="text-xl mt-3 text-[#55C84A]" /> 
                 </div> 
                 <p className="text-white font-bold text-xl">Easy Returns</p>
                 <p className="text-white/80 mt-2 text-sm md:text-lg">Not satisfied with your purchase? No worries. We offer a simple and hassle-free return process within 30 days.</p>
@@ -48,7 +48,7 @@ function Services(){
 
             <div className="ml-7 mt-6 mb-4 border border-[#26352D] rounded-xl p-2 ">
                 <div className=" rounded-full px-2">
-                    <FontAwesomeIcon icon={faTruck} className="text-xl mt-3 text-[#55C84A]" /> 
+                    <FontAwesomeIcon icon={faHeadphones} className="text-xl mt-3 text-[#55C84A]" /> 
                 </div> 
                 <p className="text-white font-bold text-xl">24/7 Customer Support</p>
                 <p className="text-white/80 mt-2 text-sm md:text-lg">Our friendly support team is available around the clock to assist you with questions, orders, and any concerns.</p>
