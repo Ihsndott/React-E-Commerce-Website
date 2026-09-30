@@ -9,6 +9,8 @@ import Products from './Products'
 import About from './About'
 import Services from './Services'
 import Addtocart from './Addtocart'
+import Cancel from './cancel'
+import Success from './success'
 
 
 const router =  createBrowserRouter ([
@@ -36,6 +38,14 @@ const router =  createBrowserRouter ([
       {
         path:"Addtocart",
         element:<Addtocart/>
+      },
+      {
+        path:"Cancel",
+        element:<Cancel/>
+      },
+      {
+        path:"Success",
+        element:<Success/>
       }
     ]
   }

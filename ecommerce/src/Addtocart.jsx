@@ -8,11 +8,34 @@ import {faTrash} from "@fortawesome/free-solid-svg-icons"
 import { useEffect, useState } from "react"
 
 
-
 //function for Save the selected product in localStorage.
 function Addtocart(){
 
       const [cartitems,setCartitems] = useState([])
+
+      
+//click proceed to checkout it will send the cart items details to backend
+const handleCheckout = async () =>{
+  try{
+    const response = await fetch("http://localhost:5000/api/payment/checkout",
+    {
+      method:"POST",
+      headers: {
+          "Content-Type":"application/json"
+      },
+      body:JSON.stringify({
+        cart:cartitems
+      })
+    });
+    const data = await response.json();
+    console.log(data);
+    if(data.success){
+      window.location.href= data.checkout.url;
+    }
+  } catch(error){
+      console.log(error);
+  }
+}
 
       useEffect(()=>{
         
@@ -154,7 +177,7 @@ function decreaseqty(id){
      </div>
       <hr className="border-[#26352D]/40 mx-4"/>
       <div>
-        <button className="bg-[#55C84A] rounded-full text-black font-semibold flex items-center px-12 py-4 mt-4 ml-20 transition duration-300 active:scale-95">Proceed to Checkout</button>
+        <button onClick={handleCheckout} className="bg-[#55C84A] rounded-full text-black font-semibold flex items-center px-12 py-4 mt-4 ml-20 transition duration-300 active:scale-95">Proceed to Checkout</button>
         <button className="text-[#50EBA7] flex items-center px-12 py-4 mt-2 ml-20 transition duration-300 active:scale-95"> ← Continue Shopping</button>
       </div>
 
